@@ -1,10 +1,14 @@
 package io.wisoft.seminar;
 
+import java.util.Date;
+
 public class Student {
 
     private String studentNo;
     private String studentName;
     private String studentBirthday;
+
+    public Student() {}
 
     public Student(String studentNo, String studentName, String studentBirthday) {
         this.studentNo = studentNo;

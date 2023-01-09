@@ -24,8 +24,8 @@ public class Main {
         selectEmployee.getEmployeeByMgt(mgt);
         System.out.println();
 
-        System.out.println("직책 코드가 R005인 직원을 검색합니다.");
-        String rcode = "R005";
+        System.out.println("직책 코드가 R004인 직원을 검색합니다.");
+        String rcode = "R004";
         selectEmployee.getEmployeeByRcode(rcode);
         System.out.println();
     }
