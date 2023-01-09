@@ -41,7 +41,7 @@ public class Main {
         for (int i = 0; i < students.length; i++) {
             students[i] = new Student();
         }
-
+//
         StudentInsertService insertStudent = new StudentInsertService();
 
         System.out.println("학번이 20110401이고, 이름이 이순신인 학생을 추가합니다.");
@@ -84,5 +84,49 @@ public class Main {
         insertStudent.insertStudentMultiBatch(students);
         System.out.println("");
 
+
+        /**
+         *  Update Example
+         */
+        StudentUpdateService updateStudent = new StudentUpdateService();
+
+        System.out.println("학번이 20110401인 학생의 생일을 1990-03-21으로 변경합니다.");
+        updateStudent.updateStudentBirthday("20110401", "1990-03-21");
+        System.out.println("");
+
+
+        System.out.println("학번이 20110401인 학생의 생일을 1990-03-25으로 변경합니다.");
+        student.setStudentNo("20110401");
+        student.setStudentBirthday("1990-03-25");
+        updateStudent.updateStudentBirthday(student);
+        System.out.println("");
+
+        System.out.println("학번이 20110501인 학생의 생일을 1990-03-01으로 변경합니다.");
+        students[0].setStudentNo("20110501");
+        students[0].setStudentBirthday("1990-03-01");
+        System.out.println("학번이 20110601인 학생의 생일을 1990-04-01으로 변경합니다.");
+        students[1].setStudentNo("20110601");
+        students[1].setStudentBirthday("1990-04-01");
+        System.out.println("학번이 20110701인 학생의 생일을 1990-05-01으로 변경합니다.");
+        students[2].setStudentNo("20110701");
+        students[2].setStudentBirthday("1990-05-01");
+        System.out.println("학번이 20110801인 학생의 생일을 1990-06-01으로 변경합니다.");
+        students[3].setStudentNo("20110801");
+        students[3].setStudentBirthday("1990-06-01");
+        System.out.println("학번이 20110901인 학생의 생일을 1990-07-01으로 변경합니다.");
+        students[4].setStudentNo("20110901");
+        students[4].setStudentBirthday("1990-07-01");
+        System.out.println("학번이 20111001인 학생의 생일을 1990-08-01으로 변경합니다.");
+        students[5].setStudentNo("20111001");
+        students[5].setStudentBirthday("1990-08-01");
+        System.out.println("학번이 20111101인 학생의 생일을 1990-09-01으로 변경합니다.");
+        students[6].setStudentNo("20111101");
+        students[6].setStudentBirthday("1990-09-01");
+        System.out.println("학번이 20111201인 학생의 생일을 1990-10-01으로 변경합니다.");
+        students[7].setStudentNo("20111201");
+        students[7].setStudentBirthday("1990-10-01");
+
+        updateStudent.updateStudentBirthdayMultiBatch(students);
+        System.out.println("");
     }
 }
