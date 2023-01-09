@@ -41,7 +41,7 @@ public class Main {
         for (int i = 0; i < students.length; i++) {
             students[i] = new Student();
         }
-//
+
         StudentInsertService insertStudent = new StudentInsertService();
 
         System.out.println("학번이 20110401이고, 이름이 이순신인 학생을 추가합니다.");
@@ -127,6 +127,37 @@ public class Main {
         students[7].setStudentBirthday("1990-10-01");
 
         updateStudent.updateStudentBirthdayMultiBatch(students);
+        System.out.println("");
+
+
+        /**
+         *  Delete Example
+         */
+
+        StudentDeleteService deleteStudent = new StudentDeleteService();
+
+        System.out.println("학번이 20110401인 학생을 목록에서 제거합니다.");
+        deleteStudent.deleteStudentNo("20110401");
+        System.out.println("");
+
+        System.out.println("학번이 20110501인 학생을 목록에서 제거합니다.");
+        students[0].setStudentNo("20110501");
+        System.out.println("학번이 20110601인 학생을 목록에서 제거합니다.");
+        students[1].setStudentNo("20110601");
+        System.out.println("학번이 20110701인 학생을 목록에서 제거합니다.");
+        students[2].setStudentNo("20110701");
+        System.out.println("학번이 20110801인 학생을 목록에서 제거합니다.");
+        students[3].setStudentNo("20110801");
+        System.out.println("학번이 20110901인 학생을 목록에서 제거합니다.");
+        students[4].setStudentNo("20110901");
+        System.out.println("학번이 20111001인 학생을 목록에서 제거합니다.");
+        students[5].setStudentNo("20111001");
+        System.out.println("학번이 20111101인 학생을 목록에서 제거합니다.");
+        students[6].setStudentNo("20111101");
+        System.out.println("학번이 20111201인 학생을 목록에서 제거합니다.");
+        students[7].setStudentNo("20111201");
+
+        deleteStudent.deleteStudentNoMultiBatch(students);
         System.out.println("");
     }
 }
